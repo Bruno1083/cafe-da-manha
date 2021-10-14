@@ -4,21 +4,21 @@
 
 <div class="card mx-auto" style="max-width: 35rem;">
     <div class="card-body " >
-        
-        <form>
+      <!-- #frm="ngForm" (ngSubmit)="criate(frm)" -->
+        <form method="post" >
             <div class="form-group">
-              <label for="1">Nome:</label>
-              <input type="text" class="form-control" id="1" aria-describedby="emailHelp" placeholder="Seu nome">
+              <label for="nome">Nome:</label><!-- [(ngModel)]="nome" -->
+              <input type="text" class="form-control" id="nome" name="nome" aria-describedby="emailHelp" placeholder="Seu nome">
             </div>
             <div class="form-group">
-              <label for="2">CPF:</label>
-              <input type="text" class="form-control" id="2" placeholder="CPF">
+              <label for="cpf">CPF:</label><!-- [(ngModel)]="cpf" -->
+              <input type="text" class="form-control" id="cpf" name="cpf"  placeholder="CPF">
             </div>
             <div class="form-group">
-                <label for="3">O que será trazido:</label>
-                <input type="text" class="form-control" id="3" placeholder="O que será trazido">
+                <label for="item">O que será trazido:</label><!-- [(ngModel)]="item" -->
+                <input type="text" class="form-control" id="item" name="item"  placeholder="O que será trazido">
             </div>
-            
+            <!-- [disabled]="frm.invalid" -->
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
