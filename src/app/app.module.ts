@@ -21,6 +21,7 @@ import { ListConvidadosComponent } from './list-convidados/list-convidados.compo
   imports: [
   RouterModule.forRoot([
     {path: '', component: FormCadastroComponent},
+    // {path: 'editar/:id', component: FormCadastroComponent},
     {path: 'list-convidados', component: ListConvidadosComponent},
     {path: '', redirectTo: '/list-convidados', pathMatch: 'full'},
   ]),
