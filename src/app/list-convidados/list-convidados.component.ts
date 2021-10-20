@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConvidadosService } from '../services/convidados.service';
 
 @Component({
   selector: 'app-list-convidados',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListConvidadosComponent implements OnInit {
 
-  constructor() { }
+  participantes!: Array<any>;
+
+  constructor(private service: ConvidadosService) { }
 
   ngOnInit(): void {
+    this.service.list()
+    .subscribe(resposta => this.participantes = resposta);
   }
 
 }

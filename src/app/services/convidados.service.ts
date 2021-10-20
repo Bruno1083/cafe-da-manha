@@ -6,7 +6,7 @@ import { HttpClient} from '@angular/common/http';
 })
 export class ConvidadosService {
 
-  convidadosUrl = 'http://localhost:8080/convidados';
+  convidadosUrl = 'http://localhost:8080/participante';
 
   constructor(private http: HttpClient) { }
 
