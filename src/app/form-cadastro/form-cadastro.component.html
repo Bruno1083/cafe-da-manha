@@ -16,14 +16,8 @@
             [ngClass]="{'is-invalid':submitted && hasError('nome')}"
            />
           <div class="invalid-feedback" *ngIf="hasError('nome') && ['required']">
-            nome obrigatorio
+            O nome é obrigatório!
           </div>
-          <!-- <div class="invalid-feedback" *ngIf="hasError('nome') && ['minlength']">
-            minimo {{hasError('nome')['minlength']".requiredLength"}} caracteres.
-          </div>
-          <div class="invalid-feedback" *ngIf="hasError('nome') && ['maxlength']">
-            maxímo {{hasError('nome')['maxlength']".requiredLength"}} caracteres.
-          </div> -->
         </div>
         <div class="col-md-12 mt-1">
           <label for="cpf">Cpf:</label>
@@ -34,7 +28,9 @@
             formControlName="cpf"
             [ngClass]="{'is-invalid':submitted && hasError('cpf')}"
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback" *ngIf="hasError('cpf') && ['required']">
+            Informe o cpf!
+          </div>
         </div>
         <div class="col-md-12 mt-1">
           <label for="item">O que será trazido:</label>
@@ -45,7 +41,9 @@
             formControlName="item"
             [ngClass]="{'is-invalid':submitted && hasError('item')}"
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback" *ngIf="hasError('item') && ['required']">
+            Informe o que sará levado!
+          </div>
         </div>
       </div>
       <div class="mt-3">

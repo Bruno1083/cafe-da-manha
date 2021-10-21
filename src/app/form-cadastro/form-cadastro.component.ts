@@ -21,12 +21,12 @@ export class FormCadastroComponent implements OnInit {
     this.form = this.fb.group({
       nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       cpf: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(11)]],
-      item: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]]
+      item: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]]
     })
     this.participante = {};
   }
-  criate(frm: NgForm) {
-    this.service.criate(this.participante).subscribe(resposta => {
+  create(frm: NgForm) {
+    this.service.create(this.participante).subscribe(resposta => {
       this.participantes.push(resposta);
 
       frm.reset();
@@ -41,6 +41,11 @@ export class FormCadastroComponent implements OnInit {
     this.submitted = true;
     if(this.form.valid){
       console.log('submit');
+      this.service.create(this.form.value).subscribe(
+        success => console.log('sucesso'),
+        error => console.log('error'),
+        () => console.log('request completo')
+      );
     }
 
   }

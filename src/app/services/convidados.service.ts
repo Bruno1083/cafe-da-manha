@@ -6,7 +6,8 @@ import { HttpClient} from '@angular/common/http';
 })
 export class ConvidadosService {
 
-  convidadosUrl = 'http://localhost:8080/participante';
+  // convidadosUrl = 'http://localhost:8080/participante';
+  convidadosUrl = '/api'
 
   constructor(private http: HttpClient) { }
 
@@ -14,7 +15,7 @@ export class ConvidadosService {
     return this.http.get<Array<any>>(this.convidadosUrl);
   }
 
-  criate(convidado: any){
+  create(convidado: any){
     return this.http.post(this.convidadosUrl, convidado);
   }
 
