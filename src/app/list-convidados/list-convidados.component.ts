@@ -16,4 +16,12 @@ export class ListConvidadosComponent implements OnInit {
     .subscribe(resposta => this.participantes = resposta);
   }
 
+  onEdit(){
+    console.log("editar");
+  }
+
+  onDelite(){
+    console.log("deletar");
+  }
+
 }

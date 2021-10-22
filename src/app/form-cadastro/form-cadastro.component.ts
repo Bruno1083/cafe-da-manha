@@ -46,6 +46,8 @@ export class FormCadastroComponent implements OnInit {
         error => console.log('error'),
         () => console.log('request completo')
       );
+      this.submitted = false;
+      this.form.reset();
     }
 
   }

@@ -2,26 +2,39 @@
     <h1>Lista convidados</h1>
 </div>
 
-<div class="card mx-auto" style="max-width: 35rem;">
-    <div class="card-body " >
-        <table class="table">
+<!-- <div class="card mx-auto" style="max-width: 35rem;">
+    <div class="card-body " > -->
+      <div class="table-responsive">
+        <table class="table table-hover">
             <thead>
-              <tr>
+              <tr class="table-success">
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Cpf</th>
                 <th scope="col">O que vai levar</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Excluir</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let participante of participantes">
+              <tr *ngFor="let participante of participantes" class="colorTable">
                 <td>{{participante.id}}</td>
                 <td>{{participante.nome}}</td>
                 <td>{{participante.cpf}}</td>
                 <td>{{participante.item}}</td>
+                <td>
+                  <span>
+                    <button type="submit" class="btn btn-outline-warning " (click)="onEdit()">Editar</button>
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    <button type="submit" class="btn btn-outline-danger " (click)="onDelite()">Excluir</button>
+                  </span>
+                </td>
               </tr>
             </tbody>
           </table>
-        
-    </div>
+        <!-- </div>  
+    </div> -->
 </div>

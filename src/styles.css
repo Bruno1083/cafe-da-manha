@@ -15,3 +15,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     justify-content: center;
     align-items: center;
 }
+.colorTable{
+    background-color: #FFF0F5;
+}   
+.btn {
+    border-radius: 30px;
+} 
